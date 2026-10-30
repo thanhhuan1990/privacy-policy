@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư – Sổ Chi Tiêu</title>
+<style>
+  :root { --fg:#0f172a; --muted:#475569; --accent:#0f766e; --bg:#f8fafc; --card:#ffffff; --line:#e2e8f0; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e2e8f0; --muted:#94a3b8; --accent:#5eead4; --bg:#0b1220; --card:#111a2e; --line:#1e293b; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:28px; line-height:1.25; margin:0 0 4px; }
+  h2 { font-size:19px; margin:32px 0 8px; }
+  .meta { color:var(--muted); font-size:14px; margin-bottom:24px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 20px; overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:15px; }
+  th, td { text-align:left; vertical-align:top; padding:8px 6px; border-bottom:1px solid var(--line); }
+  a { color:var(--accent); }
+  nav { margin-bottom:24px; font-size:14px; }
+  hr { border:0; border-top:1px solid var(--line); margin:48px 0; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#vi">Tiếng Việt</a> · <a href="#en">English</a> · <a href="#delete">Xóa tài khoản / Delete account</a></nav>
+
+<section id="vi">
+<h1>Chính sách quyền riêng tư – Sổ Chi Tiêu</h1>
+<div class="meta">Ứng dụng: Sổ Chi Tiêu (com.huanhuynh.sochitieu) · Có hiệu lực từ: 30/10/2026</div>
+
+<p>Chính sách này giải thích ứng dụng <b>Sổ Chi Tiêu</b> ("ứng dụng", "chúng tôi") thu thập, sử dụng và chia sẻ dữ liệu như thế nào.</p>
+
+<h2>1. Dữ liệu tài chính bạn nhập</h2>
+<p>Gồm: ví/tài khoản (tên, loại, số dư ban đầu), giao dịch thu/chi/chuyển khoản (số tiền, danh mục, ghi chú, thời gian), ngân sách, khoản vay/nợ (tên người, số tiền, hạn trả), giao dịch định kỳ và cài đặt.</p>
+<p><b>Mặc định, dữ liệu chỉ lưu trên thiết bị của bạn.</b> Ứng dụng không kết nối với tài khoản ngân hàng và không yêu cầu số tài khoản, số thẻ hay mật khẩu ngân hàng.</p>
+
+<h2>2. Đồng bộ và chia sẻ (tùy chọn)</h2>
+<p>Nếu bạn chọn đăng nhập bằng Google để đồng bộ hoặc chia sẻ sổ:</p>
+<ul>
+<li>Chúng tôi nhận từ Google: <b>địa chỉ email, tên hiển thị và mã người dùng</b> (qua Firebase Authentication).</li>
+<li>Dữ liệu tài chính của các sổ được lưu trên <b>Firebase Realtime Database</b> (Google Cloud) để đồng bộ giữa các thiết bị của bạn.</li>
+<li>Khi bạn chia sẻ một sổ bằng mã mời, <b>các thành viên của sổ đó xem và chỉnh sửa được dữ liệu trong sổ</b> và thấy tên/email của nhau.</li>
+<li>Quyền truy cập được giới hạn bằng quy tắc bảo mật: chỉ thành viên của sổ mới đọc/ghi được sổ đó. Dữ liệu được truyền qua kết nối mã hóa (HTTPS).</li>
+</ul>
+
+<h2>3. Quét hóa đơn, nhập bằng giọng nói, khóa ứng dụng</h2>
+<p><b>Quét hóa đơn</b>: ảnh bạn chụp/chọn được nhận dạng chữ <b>ngay trên máy</b> bằng Google ML Kit; ảnh không được tải lên máy chủ của chúng tôi và không được lưu lại. <b>Nhập bằng giọng nói</b>: dùng dịch vụ nhận dạng giọng nói của hệ thống Android (do Google hoặc nhà sản xuất máy cung cấp); ứng dụng chỉ nhận văn bản kết quả. <b>Khóa vân tay/khuôn mặt</b>: do hệ điều hành xử lý, ứng dụng không nhận dữ liệu sinh trắc học.</p>
+
+<h2>4. Quảng cáo, thống kê và báo lỗi</h2>
+<div class="card">
+<table>
+<tr><th>Dịch vụ</th><th>Mục đích</th><th>Dữ liệu có thể thu thập</th></tr>
+<tr><td>Google AdMob (và Google UMP)</td><td>Hiển thị và đo lường quảng cáo, chống gian lận, quản lý đồng ý</td><td>Advertising ID, địa chỉ IP, thông tin thiết bị, tương tác với quảng cáo, vị trí gần đúng suy ra từ IP</td></tr>
+<tr><td>Firebase Analytics</td><td>Thống kê cách sử dụng để cải thiện ứng dụng</td><td>Sự kiện sử dụng, mã cài đặt, thông tin thiết bị, Advertising ID</td></tr>
+<tr><td>Firebase Crashlytics</td><td>Phát hiện và sửa lỗi</td><td>Nhật ký lỗi, thông tin thiết bị, phiên bản ứng dụng</td></tr>
+<tr><td>Firebase Remote Config</td><td>Điều chỉnh cấu hình (ví dụ tần suất quảng cáo)</td><td>Mã cài đặt ứng dụng</td></tr>
+</table>
+</div>
+<p><b>Số tiền, giao dịch, ghi chú và mọi dữ liệu tài chính của bạn không bao giờ được gửi cho bên quảng cáo hay dùng để nhắm mục tiêu quảng cáo.</b> Chúng tôi không bán dữ liệu cá nhân. Tham khảo: <a href="https://policies.google.com/technologies/partner-sites">Cách Google sử dụng dữ liệu từ ứng dụng đối tác</a>, <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>.</p>
+
+<h2>5. Quyền ứng dụng sử dụng</h2>
+<p><b>Internet</b>: đồng bộ (nếu bật), tải quảng cáo, gửi thống kê/báo lỗi. <b>Thông báo</b>: cảnh báo ngân sách, nhắc hạn nợ và giao dịch định kỳ. <b>Advertising ID</b>: quảng cáo và thống kê. Ứng dụng không xin quyền danh bạ, vị trí, micro hay bộ nhớ.</p>
+
+<h2>6. Lưu giữ và lựa chọn của bạn</h2>
+<p>Dữ liệu trên máy tồn tại đến khi bạn xóa trong ứng dụng, gỡ ứng dụng hoặc xóa dữ liệu ứng dụng. Dữ liệu đám mây tồn tại đến khi bạn xóa sổ hoặc xóa tài khoản (xem mục 8). Bạn có thể xuất dữ liệu ra CSV hoặc sao lưu JSON bất cứ lúc nào. Nếu bạn ở EEA, Anh, Thụy Sĩ hoặc khu vực có quy định tương tự, ứng dụng sẽ hỏi đồng ý trước khi dùng dữ liệu cho quảng cáo cá nhân hóa; đổi lựa chọn trong <b>Cài đặt → Quyền riêng tư &amp; quảng cáo</b>.</p>
+
+<h2>7. Trẻ em</h2>
+<p>Ứng dụng dành cho người từ 18 tuổi trở lên và không cố ý thu thập dữ liệu của trẻ em.</p>
+
+<h2>8. Thay đổi chính sách và liên hệ</h2>
+<p>Chúng tôi có thể cập nhật chính sách này; ngày hiệu lực ở đầu trang sẽ được cập nhật. Mọi câu hỏi hoặc yêu cầu, vui lòng gửi email tới <a href="mailto:thanhhuan1990@gmail.com">thanhhuan1990@gmail.com</a>.</p>
+</section>
+
+<hr>
+
+<section id="delete">
+<h1>Xóa tài khoản và dữ liệu</h1>
+<p><b>Trong ứng dụng:</b> Cài đặt → Đồng bộ &amp; chia sẻ → <b>Xóa tài khoản &amp; dữ liệu đám mây</b> → xác nhận. Khi xóa:</p>
+<ul>
+<li>Tài khoản đăng nhập (email, tên, mã người dùng) bị xóa khỏi Firebase Authentication.</li>
+<li>Các sổ bạn sở hữu mà không còn thành viên khác bị xóa vĩnh viễn khỏi đám mây. Nếu sổ còn thành viên khác, quyền sở hữu được chuyển cho một thành viên khác và dữ liệu sổ vẫn còn cho họ.</li>
+<li>Bạn bị xóa khỏi các sổ được chia sẻ, các mã mời bạn tạo bị xóa.</li>
+<li>Dữ liệu trên máy được giữ lại, trừ khi bạn chọn "Xóa cả dữ liệu trên máy này".</li>
+</ul>
+<p><b>Không truy cập được ứng dụng?</b> Gửi email từ địa chỉ Google đã đăng nhập tới <a href="mailto:thanhhuan1990@gmail.com?subject=X%C3%B3a%20t%C3%A0i%20kho%E1%BA%A3n%20S%E1%BB%95%20Chi%20Ti%C3%AAu">thanhhuan1990@gmail.com</a> với tiêu đề "Xóa tài khoản Sổ Chi Tiêu". Chúng tôi sẽ xóa tài khoản và dữ liệu đám mây trong vòng 30 ngày. Dữ liệu thống kê/báo lỗi ẩn danh do Firebase lưu theo thời hạn mặc định của Google.</p>
+<p><b>Delete your account (English):</b> In the app go to Settings → Sync &amp; sharing → "Xóa tài khoản &amp; dữ liệu đám mây" and confirm. Or email <a href="mailto:thanhhuan1990@gmail.com">thanhhuan1990@gmail.com</a> from your signed-in Google address with the subject "Delete Sổ Chi Tiêu account"; we delete the account and its cloud data within 30 days. Books you own that still have other members are transferred to another member.</p>
+</section>
+
+<hr>
+
+<section id="en">
+<h1>Privacy Policy – Sổ Chi Tiêu</h1>
+<div class="meta">App: Sổ Chi Tiêu – Expense Tracker (com.huanhuynh.sochitieu) · Effective date: October 30, 2026</div>
+
+<h2>1. Financial data you enter</h2>
+<p>Wallets (name, type, opening balance), income/expense/transfer transactions (amount, category, note, time), budgets, loans/debts (person name, amount, due date), recurring transactions and settings. <b>By default this data is stored only on your device.</b> The app does not connect to bank accounts and never asks for bank account numbers, card numbers or banking passwords.</p>
+
+<h2>2. Sync and sharing (optional)</h2>
+<p>If you sign in with Google to sync or share a book, we receive your <b>email address, display name and user ID</b> (via Firebase Authentication), and your books' financial data is stored in <b>Firebase Realtime Database</b> (Google Cloud) to sync across your devices. When you share a book with an invite code, <b>members of that book can view and edit its data</b> and see each other's name/email. Security rules restrict each book to its members; data is transmitted over HTTPS.</p>
+
+<h2>3. Receipt scanning, voice input, app lock</h2>
+<p>Receipt photos are processed <b>on the device</b> with Google ML Kit text recognition and are not uploaded to our servers or stored. Voice input uses the Android system speech recognizer; the app only receives the resulting text. Biometric lock is handled by the operating system; the app never receives biometric data.</p>
+
+<h2>4. Ads, analytics and crash reporting</h2>
+<p>The app uses Google AdMob/UMP (ads, measurement, fraud prevention, consent), Firebase Analytics (usage statistics), Firebase Crashlytics (crash logs) and Firebase Remote Config (configuration). These may collect the Advertising ID, IP address, device information, app interactions and crash logs. <b>Your amounts, transactions, notes and other financial data are never shared with advertisers or used for ad targeting.</b> We do not sell personal data. See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>.</p>
+
+<h2>5. Permissions</h2>
+<p>Internet (sync if enabled, ads, analytics/crash reports), Notifications (budget alerts, debt and recurring reminders), Advertising ID. The app does not request contacts, location, microphone or storage permissions.</p>
+
+<h2>6. Retention and your choices</h2>
+<p>On-device data stays until you delete it, uninstall the app or clear app data. Cloud data stays until you delete the book or your account (see <a href="#delete">Delete account</a>). You can export to CSV or back up to JSON at any time. Users in the EEA, UK, Switzerland and similar regions are asked for consent before personalized ads; change it in Settings → Privacy &amp; ads.</p>
+
+<h2>7. Children</h2>
+<p>The app is intended for users 18 and over and does not knowingly collect data from children.</p>
+
+<h2>8. Changes and contact</h2>
+<p>We may update this policy; the effective date above will change. Contact: <a href="mailto:thanhhuan1990@gmail.com">thanhhuan1990@gmail.com</a></p>
+</section>
+</main>
+</body>
+</html>
